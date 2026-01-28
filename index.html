@@ -1,12 +1,46 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>remember memento</title>
-     <link rel="stylesheet" href="sample.css">
-     <link rel="icon" href="favicon.ico">
-     <meta name="robots" content="noindex" />
-  </head>
-  <body>
-    
-  </body>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>remember memento</title>
+  <link rel="stylesheet" href="sample.css">
+</head>
+
+<body>
+
+  <!-- 背景画面 -->
+  <div id="cover">
+
+    <!-- 押すボタン（透明） -->
+    <button id="startBtn"></button>
+
+    <h1 class="title">欲望</h1>
+
+  </div>
+
+  <!-- okiba（最初は隠す） -->
+  <div id="okiba" class="hidden">
+
+    <a href="https://example.com">
+      <img src="o1.jpg">
+    </a>
+
+    <a href="https://example.com">
+      <img src="n1.jpg">
+    </a>
+
+  </div>
+
+  <script>
+    const btn = document.getElementById("startBtn");
+    const cover = document.getElementById("cover");
+    const okiba = document.getElementById("okiba");
+
+    btn.addEventListener("click", () => {
+      cover.classList.add("hidden");
+      okiba.classList.remove("hidden");
+    });
+  </script>
+
+</body>
 </html>

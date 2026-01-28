@@ -1,12 +1,45 @@
-html,body{
-  margin:0;
-  padding:0;
-  height:100%;
-  overflow:hidden;
-}
-body{
-  background-image:url("cookie-img.jpg");
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>remember memento</title>
+  <link rel="stylesheet" href="sample.css">
+</head>
+
+<body>
+
+  <div id="cover">
+
+    <!-- 押すボタン（透明） -->
+    <button id="startBtn"></button>
+
+    <h1 class="title">欲望</h1>
+
+  </div>
+
+  <!-- okiba（最初は隠す） -->
+  <div id="okiba" class="hidden">
+
+    <a href="https://example.com">
+      <img src="o1.jpg">
+    </a>
+
+    <a href="https://example.com">
+      <img src="n1.jpg">
+    </a>
+
+  </div>
+
+  <script>
+    const btn = document.getElementById("startBtn");
+    const cover = document.getElementById("cover");
+    const okiba = document.getElementById("okiba");
+
+    btn.addEventListener("click", () => {
+      cover.classList.add("hidden");
+      okiba.classList.remove("hidden");
+    });
+  </script>
+
+</body>
+</html>

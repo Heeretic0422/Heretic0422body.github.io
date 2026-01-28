@@ -1,45 +1,54 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>remember memento</title>
-  <link rel="stylesheet" href="sample.css">
-</head>
+/* 全体リセット */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
-<body>
+/* 背景画面 */
+#cover {
+  position: fixed;
+  inset: 0;
+  background-image: url("cookie-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-  <div id="cover">
+/* タイトル */
+.title {
+  color: hotpink;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 100px;
+}
 
-    <!-- 押すボタン（透明） -->
-    <button id="startBtn"></button>
+/* 押すボタン（透明） */
+#startBtn {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  cursor: pointer;
+}
 
-    <h1 class="title">欲望</h1>
+/* okiba */
+#okiba {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-  </div>
+/* 画像サイズ */
+#okiba img {
+  width: 300px;
+  border-radius: 10px;
+}
 
-  <!-- okiba（最初は隠す） -->
-  <div id="okiba" class="hidden">
-
-    <a href="https://example.com">
-      <img src="o1.jpg">
-    </a>
-
-    <a href="https://example.com">
-      <img src="n1.jpg">
-    </a>
-
-  </div>
-
-  <script>
-    const btn = document.getElementById("startBtn");
-    const cover = document.getElementById("cover");
-    const okiba = document.getElementById("okiba");
-
-    btn.addEventListener("click", () => {
-      cover.classList.add("hidden");
-      okiba.classList.remove("hidden");
-    });
-  </script>
-
-</body>
-</html>
+/* 非表示 */
+.hidden {
+  display: none;
+}

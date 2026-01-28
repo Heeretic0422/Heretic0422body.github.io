@@ -1,59 +1,36 @@
-/* 全体リセット */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+html, body{
+  margin:0;
+  padding:0;
+  height:100%;
 }
 
-/* 背景画面 */
-#cover {
-  position: fixed;
-  inset: 0;
-  background-image: url("cookie-img.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+#cover{
+  position:fixed;
+  inset:0;
+  background:url("cookie-img.jpg") center/cover no-repeat;
 }
 
-/* タイトル */
-.title {
-  color: hotpink;
-  font-size: 60px;
-  text-align: center;
-  margin-top: 100px;
+#startBtn{
+  position:absolute;
+  left:20px;
+  top:20px;
+  width:120px;
+  height:120px;
+
+  opacity:0;
+  background:transparent;
+  border:none;
+
+  cursor:pointer;
+  z-index:9999;
 }
 
-/* 押すボタン（透明） */
-#startBtn {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  width: 100px;
-  height: 100px;
-
-  opacity: 0;
-  background: transparent;
-  border: none;
-
-  cursor: pointer;
-  z-index: 10;
+.hidden{
+  display:none;
 }
 
-/* okiba */
-#okiba {
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-/* 画像サイズ */
-#okiba img {
-  width: 300px;
-  border-radius: 10px;
-}
-
-/* 非表示 */
-.hidden {
-  display: none;
+#okiba{
+  padding:50px;
+  font-size:40px;
+  color:white;
 }
